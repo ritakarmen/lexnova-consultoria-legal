@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+:root{
+  --ink:#102321;
+  --green:#0f493f;
+  --green2:#163f38;
+  --mint:#dcebe5;
+  --cream:#f5f2e9;
+  --paper:#fffdfa;
+  --gold:#bd955b;
+  --muted:#657471;
+  --line:#dfe5e1;
+  --shadow:0 24px 70px rgba(19,44,39,.11);
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",Arial,sans-serif}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit}
+.container{width:min(1160px,calc(100% - 40px));margin-inline:auto}
+.siteHeader{position:sticky;top:0;z-index:20;background:rgba(255,253,250,.93);backdrop-filter:blur(14px);border-bottom:1px solid rgba(16,35,33,.08)}
+.nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:28px}
+.brand{display:flex;align-items:center;gap:11px}
+.brandIcon{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:var(--green);color:white;font:700 23px "Playfair Display"}
+.brand strong,.brand small{display:block}
+.brand strong{font-family:"Playfair Display";font-size:20px}
+.brand small{color:var(--muted);font-size:10px;letter-spacing:.08em;text-transform:uppercase}
+.navLinks{display:flex;gap:30px;font-size:13px;color:#364945}
+.navLinks a:hover{color:var(--green)}
+.button{min-height:46px;padding:0 18px;border-radius:999px;border:1px solid transparent;display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:700;font-size:13px;cursor:pointer}
+.buttonDark{background:var(--ink);color:white}
+.buttonPrimary{background:var(--green);color:white;box-shadow:0 10px 26px rgba(15,73,63,.18)}
+.buttonGhost{border-color:#cfd9d5;background:white}
+.hero{overflow:hidden;background:linear-gradient(135deg,#f8f5ed 0%,#f3f7f4 60%,#e7f0ec 100%)}
+.heroGrid{min-height:680px;display:grid;grid-template-columns:1.02fr .98fr;align-items:center;gap:50px;padding-block:70px}
+.eyebrow{display:inline-block;color:var(--green);font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.hero h1,.section h2,.contact h2{font-family:"Playfair Display";font-weight:700;letter-spacing:-.035em}
+.hero h1{max-width:720px;margin:14px 0 20px;font-size:clamp(50px,6.2vw,78px);line-height:1}
+.hero h1 span{color:var(--green)}
+.heroCopy>p{max-width:630px;margin:0;color:var(--muted);font-size:17px;line-height:1.8}
+.heroActions{display:flex;gap:12px;margin-top:29px;flex-wrap:wrap}
+.trust{display:grid;grid-template-columns:repeat(3,1fr);max-width:610px;margin-top:48px;padding-top:23px;border-top:1px solid #d8dfda;gap:18px}
+.trust strong,.trust span{display:block}
+.trust strong{font-family:"Playfair Display";font-size:21px}
+.trust span{margin-top:4px;color:var(--muted);font-size:10px}
+.heroVisual{min-height:510px;position:relative;display:grid;place-items:center}
+.orb{position:absolute;border:1px solid rgba(15,73,63,.12);border-radius:50%}
+.orbOne{width:480px;height:480px}
+.orbTwo{width:380px;height:380px}
+.consultCard{position:relative;z-index:3;width:min(390px,86%);padding:32px;border-radius:28px;background:rgba(255,255,255,.92);box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.9)}
+.status{display:flex;align-items:center;gap:7px;color:var(--muted);font-size:11px}
+.status span{width:8px;height:8px;border-radius:50%;background:#32a178}
+.avatar{width:70px;height:70px;border-radius:20px;display:grid;place-items:center;margin:28px 0 22px;background:var(--green);color:white;font-family:"Playfair Display";font-size:26px}
+.consultCard h2{margin:0;font:700 31px/1.12 "Playfair Display";letter-spacing:-.02em}
+.consultCard p{color:var(--muted);font-size:12px;line-height:1.6}
+.consultCard ul{list-style:none;padding:0;margin:24px 0 0;display:grid;gap:10px;color:#35534c;font-size:12px}
+.floating{position:absolute;z-index:5;display:flex;align-items:center;gap:10px;padding:13px 15px;border-radius:14px;background:white;box-shadow:0 15px 40px rgba(20,53,47,.11);font-size:20px}
+.floating span{font-size:10px;color:var(--muted)}
+.floating strong{display:block;color:var(--ink);font-size:12px}
+.floatingOne{left:0;top:18%}
+.floatingTwo{right:0;bottom:17%}
+.floatingTwo b{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--mint);color:var(--green);font-size:12px}
+.section{padding:100px 0}
+.sectionHead{display:grid;grid-template-columns:1.2fr .8fr;gap:80px;align-items:end;margin-bottom:42px}
+.section h2{margin:9px 0 0;font-size:clamp(39px,4.8vw,58px);line-height:1.05}
+.sectionHead p,.processIntro p,.teamCopy p,.faqIntro p{margin:0;color:var(--muted);line-height:1.8}
+.serviceGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.serviceCard{min-height:330px;padding:26px;border:1px solid var(--line);border-radius:20px;background:white;display:flex;flex-direction:column;transition:.2s ease}
+.serviceCard:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:#bdcec8}
+.serviceIcon{width:54px;height:54px;border-radius:15px;display:grid;place-items:center;background:var(--cream);font-size:24px}
+.serviceCard h3{margin:28px 0 9px;font-family:"Playfair Display";font-size:25px}
+.serviceCard p{margin:0;color:var(--muted);font-size:13px;line-height:1.7}
+.serviceCard a{margin-top:auto;padding-top:28px;color:var(--green);font-size:12px;font-weight:800}
+.soft{background:var(--cream)}
+.processGrid{display:grid;grid-template-columns:.92fr 1.08fr;gap:90px;align-items:center}
+.processIntro h2,.teamCopy h2,.faqIntro h2{font-size:clamp(40px,5vw,59px)}
+.checks{display:grid;gap:12px;margin-top:26px;color:#294a43;font-size:12px;font-weight:700}
+.steps{display:grid;gap:12px}
+.step{display:grid;grid-template-columns:68px 1fr;gap:16px;padding:24px;border-radius:18px;background:white;border:1px solid rgba(15,73,63,.09)}
+.stepNumber{width:50px;height:50px;border-radius:50%;display:grid;place-items:center;background:var(--green);color:white;font:700 13px "Playfair Display"}
+.step h3{margin:3px 0 7px;font:700 22px "Playfair Display"}
+.step p{margin:0;color:var(--muted);font-size:12px;line-height:1.7}
+.teamGrid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.teamVisual{position:relative;min-height:500px;border-radius:28px;background:linear-gradient(135deg,#dfe9e4,#f5f0e5);overflow:hidden}
+.portrait{position:absolute;display:grid;place-items:center;border-radius:100px 100px 25px 25px;color:white;font:700 34px "Playfair Display";box-shadow:0 18px 45px rgba(18,53,47,.16)}
+.portraitMain{width:190px;height:280px;left:12%;bottom:0;background:#2d5b52}
+.portraitSecond{width:175px;height:245px;right:10%;bottom:35px;background:#a07f52}
+.portraitThird{width:135px;height:185px;left:44%;top:36px;background:#173c36}
+.teamBadge{position:absolute;right:8%;top:9%;padding:12px 15px;border-radius:999px;background:white;color:var(--green);font-size:11px;font-weight:800}
+.teamCopy h2{margin:10px 0 22px}
+.teamStats{display:grid;grid-template-columns:repeat(3,1fr);gap:11px;margin:30px 0}
+.teamStats div{padding:17px;border-radius:14px;background:#f7f7f3}
+.teamStats strong,.teamStats span{display:block}
+.teamStats strong{font-family:"Playfair Display";font-size:25px;color:var(--green)}
+.teamStats span{margin-top:4px;color:var(--muted);font-size:9px;line-height:1.5}
+.textLink{font-size:12px;font-weight:800;color:var(--green)}
+.faqSection{background:#f7f8f5}
+.faqGrid{display:grid;grid-template-columns:.78fr 1.22fr;gap:80px}
+.faqIntro h2{margin:10px 0 20px}
+.faqList{display:grid;gap:10px}
+details{border:1px solid var(--line);border-radius:15px;background:white;padding:0 19px}
+summary{min-height:65px;display:flex;align-items:center;justify-content:space-between;gap:20px;cursor:pointer;font-weight:700;font-size:13px;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary span{font-size:22px;color:var(--green)}
+details p{margin:0;padding:0 0 19px;color:var(--muted);font-size:12px;line-height:1.75}
+.contact{padding:100px 0;background:var(--green);color:white}
+.contactGrid{display:grid;grid-template-columns:.82fr 1.18fr;gap:80px;align-items:start}
+.eyebrowLight{color:#a9d8cc}
+.contact h2{margin:11px 0 20px;font-size:clamp(42px,5vw,61px)}
+.contactCopy>p{color:rgba(255,255,255,.68);line-height:1.8}
+.contactPoints{display:grid;gap:13px;margin-top:30px;color:rgba(255,255,255,.88);font-size:12px}
+.form{padding:28px;border-radius:20px;background:white;color:var(--ink)}
+.fieldGrid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form label{display:grid;gap:8px;margin-bottom:16px;font-size:11px;font-weight:800;color:#30423e}
+.form input,.form select,.form textarea{width:100%;padding:13px 14px;border:1px solid #d9dfdc;border-radius:10px;background:#fbfbf8;color:var(--ink);outline:none}
+.form input:focus,.form select:focus,.form textarea:focus{border-color:#76a99e;box-shadow:0 0 0 3px rgba(118,169,158,.12)}
+.buttonFull{width:100%}
+.formNote{margin:12px 0 0;color:#7e8b88;font-size:10px;line-height:1.5}
+.footer{padding:65px 0 25px;background:#071a18;color:white}
+.footerGrid{display:grid;grid-template-columns:1.4fr .6fr .6fr;gap:70px}
+.brandFooter .brandIcon{background:#dcebe5;color:var(--green)}
+.brandFooter small{color:rgba(255,255,255,.55)}
+.footerGrid>div{display:grid;align-content:start;gap:11px}
+.footerGrid p,.footerGrid a{color:rgba(255,255,255,.57);font-size:11px;line-height:1.65}
+.footerGrid a:hover{color:white}
+.footerBottom{margin-top:48px;padding-top:18px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;gap:20px;color:rgba(255,255,255,.4);font-size:10px}
+
+@media(max-width:980px){
+  .navLinks{display:none}
+  .heroGrid,.processGrid,.teamGrid,.faqGrid,.contactGrid{grid-template-columns:1fr}
+  .heroCopy{text-align:center}
+  .heroCopy>p{margin-inline:auto}
+  .heroActions,.trust{justify-content:center;margin-inline:auto}
+  .heroGrid{gap:10px}
+  .heroVisual{min-height:470px}
+  .serviceGrid{grid-template-columns:repeat(2,1fr)}
+  .sectionHead{grid-template-columns:1fr;gap:15px}
+  .processGrid,.teamGrid,.faqGrid,.contactGrid{gap:48px}
+}
+
+@media(max-width:640px){
+  .container{width:min(100% - 24px,1160px)}
+  .nav{min-height:68px}
+  .brand small{display:none}
+  .buttonDark{padding-inline:12px;font-size:11px}
+  .heroGrid{min-height:auto;padding-block:48px}
+  .hero h1{font-size:44px}
+  .heroCopy>p{font-size:15px}
+  .heroActions{display:grid}
+  .heroActions .button{width:100%}
+  .trust{grid-template-columns:repeat(3,1fr);gap:7px}
+  .trust span{font-size:8px}
+  .heroVisual{min-height:410px}
+  .orbOne{width:330px;height:330px}
+  .orbTwo{width:270px;height:270px}
+  .consultCard{width:91%;padding:23px}
+  .consultCard h2{font-size:27px}
+  .floatingOne{left:0;top:5%}
+  .floatingTwo{right:0;bottom:7%}
+  .section,.contact{padding:70px 0}
+  .section h2,.contact h2{font-size:39px}
+  .serviceGrid{grid-template-columns:1fr}
+  .serviceCard{min-height:275px}
+  .step{grid-template-columns:55px 1fr;padding:19px}
+  .teamVisual{min-height:400px}
+  .portraitMain{width:165px;height:230px}
+  .portraitSecond{width:145px;height:205px}
+  .portraitThird{width:115px;height:155px}
+  .teamStats{grid-template-columns:1fr}
+  .fieldGrid{grid-template-columns:1fr;gap:0}
+  .form{padding:20px}
+  .footerGrid{grid-template-columns:1fr 1fr}
+  .footerGrid>div:first-child{grid-column:1/-1}
+  .footerBottom{flex-direction:column}
+}
