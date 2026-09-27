@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
 const isGitHubActions = process.env.GITHUB_ACTIONS === "true";
-const repoName = "lexnova-consultoria-legal";
+const repoName =
+  process.env.GITHUB_REPOSITORY?.split("/")[1] ?? "lexnova-consultoria-legal";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
