@@ -12,4 +12,8 @@ Proyecto de portafolio desarrollado con **Next.js + TypeScript** para una firma 
 - Exportación estática para GitHub Pages.
 - Workflow de despliegue automático.
 
+## Demo pública
+
+https://ritakarmen.github.io/lexnova-consultoria-legal/
+
 > LexNova es una marca ficticia utilizada únicamente como demostración de portafolio. Los textos no constituyen asesoría legal.
